@@ -72,13 +72,13 @@ export function OutsideWrapper({ children }: { children: ReactNode }) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              backgroundColor: "var(--background-secondary)",
+              backgroundColor: "var(--color-bg-secondary)",
               height: "35px",
               zIndex: "1000",
               color: "var(--text)",
               borderRadius: "10px",
             }}
-            border="2px solid var(--border-modal)"
+            border="2px solid var(--color-border)"
             opacity="1"
           />
         ))}
@@ -394,7 +394,7 @@ function Bookings() {
               )} shadow-md flex items-center`}
               style={{
                 left: `${calcBookingPositionX(new Date(booking.startDate))}px`,
-                top: `${calcBookingPositionY(booking.cabins.id)}px`,
+                top: `${calcBookingPositionY(booking.cabin.id)}px`,
                 width: `${calcBookingWidth(
                   new Date(booking.startDate),
                   new Date(booking.endDate)
