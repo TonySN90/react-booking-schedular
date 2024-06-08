@@ -138,10 +138,10 @@ function useSchedular(): ISchedularTypes {
     months: { month: number; firstDayOfMonth: Date }
   ) {
     if (checkIfToday(months, day)) {
-      return "bg-active";
+      return "bg-color_main";
     }
     if (checkIfWeekend(months, day)) {
-      return "bg-timetable_weekend_bg";
+      return "bg-color_bg_weekend";
     }
   }
 
@@ -206,6 +206,7 @@ function useSchedular(): ISchedularTypes {
   }
 
   function calcBookingPositionY(cabinId: number) {
+    console.log(cabinId);
     const labelPosition = cabins.findIndex((cabin) => cabin.id === cabinId) + 1;
     return booking_offset_top + rowHeight * labelPosition;
   }
@@ -227,19 +228,19 @@ function useSchedular(): ISchedularTypes {
       isNaN(end.getTime()) ||
       isNaN(now.getTime())
     ) {
-      return "bg-status_gray";
+      return "bg-color_status_5";
     }
 
     if (start.toDateString() === now.toDateString()) {
-      return "bg-status_green";
+      return "bg-color_status_1";
     } else if (end.toDateString() === now.toDateString()) {
-      return "bg-status_red";
+      return "bg-color_status_3";
     } else if (start < now && end > now) {
-      return "bg-status_blue";
+      return "bg-color_status_4";
     } else if (start > now) {
-      return "bg-status_orange";
+      return "bg-color_status_2";
     } else {
-      return "bg-status_gray";
+      return "bg-color_status_5";
     }
   }
 
