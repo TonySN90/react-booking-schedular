@@ -89,7 +89,7 @@ export function OutsideWrapper({ children }: { children: ReactNode }) {
 
 function InsideWrapper({ children }: { children: ReactNode }) {
   return (
-    <div className="relative flex shadow-xl overflow-x-auto max-w-[100%] bg-color_background">
+    <div className="relative flex shadow-xl overflow-x-auto max-w-[100%] bg-color_bg_secondary">
       {children}
     </div>
   );
@@ -103,7 +103,7 @@ function SideBar({ children }: { children: ReactNode }) {
 
   return (
     <div
-      className="bg-color_background h-full z-10"
+      className="bg-color_bg_secondary h-full z-10"
       style={{ width: `${labelWidth}px` }}
     >
       {children}
@@ -141,13 +141,13 @@ function Canvas() {
     <div
       className="h-full w-full overflow-x-scroll relative"
       style={{
-        scrollbarColor: "var(--active) var(--background-primary)",
+        scrollbarColor: "var(--color-main) var(--color-bg-primary)",
         scrollSnapType: "x mandatory",
       }}
       onScroll={handleScroll}
     >
       <div
-        className="relative h-full bg-color_background overflow-hidden"
+        className="relative h-full bg-color_bg_secondary overflow-hidden"
         style={{ width: `${monthWidth}px` }}
       >
         <MonthRow />
@@ -176,7 +176,7 @@ function Controls() {
             data-tooltip-id={
               tooltips.find((t) => t.id === "control-prev-btn")?.id
             }
-            className="flex justify-center items-center w-10 pb-[2px] cursor-pointer hover:text-color_background transition-all"
+            className="flex justify-center items-center w-10 pb-[2px] cursor-pointer hover:text-color_bg_secondary transition-all"
             onClick={() => loadCalendar("left")}
           >
             <IoIosArrowDropleftCircle className="w-7 h-7" />
@@ -185,7 +185,7 @@ function Controls() {
             data-tooltip-id={
               tooltips.find((t) => t.id === "control-current-btn")?.id
             }
-            className="flex justify-center items-center w-10 cursor-pointer hover:text-color_background transition-all"
+            className="flex justify-center items-center w-10 cursor-pointer hover:text-color_bg_secondary transition-all"
             onClick={() => loadCalendar("now")}
           >
             <BsClockFill className="w-8 h-8" />
@@ -194,7 +194,7 @@ function Controls() {
             data-tooltip-id={
               tooltips.find((t) => t.id === "control-next-btn")?.id
             }
-            className="flex justify-center items-center w-10 cursor-pointer hover:text-color_background transition-all"
+            className="flex justify-center items-center w-10 cursor-pointer hover:text-color_bg_secondary transition-all"
             onClick={() => loadCalendar("right")}
           >
             <IoIosArrowDroprightCircle className="w-7 h-7" />
