@@ -8,6 +8,8 @@ function LabelBar() {
 
   const { cabins, isLoadingCabins } = schedularData;
 
+  console.log(isLoadingCabins);
+
   return (
     <>
       {cabins.length === 0 && isLoadingCabins ? <LabelsLoader /> : <Labels />}

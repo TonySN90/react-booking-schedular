@@ -47,7 +47,7 @@ function Controls() {
             <IoIosArrowDroprightCircle className="w-7 h-7" />
           </div>
         </div>
-        <div className="hidden justify-between w-[50px] m-auto">
+        <div className="flex justify-between w-[50px] m-auto">
           <div onClick={() => handleZoom("in")} className="cursor-pointer">
             <CiCirclePlus
               className={`w-5 h-5 ${zoomLevel === 2 ? "text-border" : ""}`}

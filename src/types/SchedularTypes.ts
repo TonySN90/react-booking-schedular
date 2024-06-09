@@ -1,48 +1,18 @@
 import { RefObject, UIEvent } from "react";
 
 export interface IBookingTypes {
-  cabins: { name: string; category: string; image: string; id: number };
   cabin: {
     id: number;
-    cabinName: string;
-    name: string;
-    category: string;
-    capacity: number;
-    price: number;
-    discount: number;
-    img: string;
-    image: string;
-    description: string;
   };
-  cabinId: number;
-  created_at: string;
-  id: number;
-  guests: {
-    email: string;
+  guest: {
     fullName: string;
-    address: string;
-    postalCode: string;
-    city: string;
-    country: string;
-    phone: string;
-    guestSince: string;
-    maxStays: number;
-    information: string;
+    id: number;
   };
-  fullName: string;
+  status: string;
+  id: number;
   startDate: string;
   endDate: string;
-  numNights: number;
   numGuests: number;
-  extrasPrice: number;
-  status: string;
-  hasBreakfast: boolean;
-  isPaid: boolean;
-  totalPrice: number;
-  cabinPrice: number;
-  pricePerNight: number;
-  allDaysPrice: number;
-  guestId: number;
 }
 
 export interface IMonth {
@@ -56,16 +26,21 @@ export interface IMonth {
 }
 
 export interface ICabinTypes {
-  id: number;
-  cabinName: string;
-  name: string;
   category: string;
-  capacity: number;
-  price: number;
-  discount?: number;
-  img: string;
+  id: number;
   image: string;
-  description: string;
+  name: string;
+}
+
+export interface IOptionsTypes {
+  bookings: IBookingTypes[];
+  cabins: ICabinTypes[];
+  isLoadingBookings: boolean;
+  isLoadingCabins: boolean;
+  fnCheckIn: () => void;
+  fnCheckOut: () => void;
+  fnShowInfo: () => void;
+  fnUpdateBooking: () => void;
 }
 
 export interface ISchedularTypes {
@@ -95,8 +70,14 @@ export interface ISchedularTypes {
 }
 
 export interface ISchedularContextTypes {
+  bookings: IBookingTypes[];
+  cabins: ICabinTypes[];
   schedularData: ISchedularTypes;
   tooltips: { id: string; content: string }[];
+  fnCheckIn: () => void;
+  fnCheckOut: () => void;
+  fnShowInfo: () => void;
+  fnUpdateBooking: () => void;
 }
 
 export type IModalContextTypes = {

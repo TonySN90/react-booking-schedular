@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import useSchedular from "../hooks/useSchedular";
 import {
+  IOptionsTypes,
   ISchedularContextTypes,
   ISchedularTypes,
 } from "../types/SchedularTypes";
@@ -15,8 +16,22 @@ import LabelBar from "./Labels";
 
 export const SchedularContext = createContext({} as ISchedularContextTypes);
 
-function ReactBookingSchedular() {
-  const schedularData = useSchedular() as ISchedularTypes;
+function ReactBookingSchedular({
+  bookings,
+  cabins,
+  isLoadingBookings,
+  isLoadingCabins,
+  fnCheckIn,
+  fnCheckOut,
+  fnShowInfo,
+  fnUpdateBooking,
+}: IOptionsTypes) {
+  const schedularData = useSchedular({
+    bookings,
+    cabins,
+    isLoadingBookings,
+    isLoadingCabins,
+  }) as ISchedularTypes;
   const tooltips = [
     { id: "control-prev-btn", content: "Setze einen Monat zurück" },
     { id: "control-current-btn", content: "Setze zum heutigen Tag" },
@@ -28,7 +43,18 @@ function ReactBookingSchedular() {
   ];
 
   return (
-    <SchedularContext.Provider value={{ schedularData, tooltips }}>
+    <SchedularContext.Provider
+      value={{
+        bookings,
+        cabins,
+        fnCheckIn,
+        fnCheckOut,
+        fnShowInfo,
+        fnUpdateBooking,
+        tooltips,
+        schedularData,
+      }}
+    >
       <OutsideWrapper>
         <InsideWrapper>
           <BookingsLoader />

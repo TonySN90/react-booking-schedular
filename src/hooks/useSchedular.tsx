@@ -1,20 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { IMonth, ISchedularTypes, LoadingTypes } from "../types/SchedularTypes";
-import { bookings, cabins } from "../dummyData";
-const bookingsLoading = "idle";
-const cabinsLoading = "idle";
+import {
+  IBookingTypes,
+  ICabinTypes,
+  IMonth,
+  ISchedularTypes,
+} from "../types/SchedularTypes";
 
-function useSchedular(): ISchedularTypes {
+function useSchedular({
+  bookings,
+  cabins,
+  isLoadingBookings,
+  isLoadingCabins,
+}: {
+  bookings: IBookingTypes[];
+  cabins: ICabinTypes[];
+  isLoadingBookings: boolean;
+  isLoadingCabins: boolean;
+}): ISchedularTypes {
   const today = new Date();
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
   const [pageLoaded, setPageLoaded] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
   const todayElement = useRef<HTMLDivElement>(null);
-
-  const isLoadingBookings = bookingsLoading === LoadingTypes.LOADING;
-  const isLoadingCabins = cabinsLoading === LoadingTypes.LOADING;
 
   const [searchParams, setSearchParams] = useSearchParams();
 

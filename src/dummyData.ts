@@ -9,7 +9,7 @@ export const bookings = [
     cabin: {
       id: 1,
     },
-    guests: {
+    guest: {
       id: 1,
       fullName: "Daniela Ulmich",
     },
@@ -23,7 +23,7 @@ export const bookings = [
     cabin: {
       id: 1,
     },
-    guests: {
+    guest: {
       id: 2,
       fullName: "Max Mustermann",
     },
@@ -37,7 +37,7 @@ export const bookings = [
     cabin: {
       id: 1,
     },
-    guests: {
+    guest: {
       id: 3,
       fullName: "Maria Musterfrau",
     },
@@ -52,7 +52,7 @@ export const bookings = [
     cabin: {
       id: 2,
     },
-    guests: {
+    guest: {
       id: 4,
       fullName: "John Doe",
     },
@@ -66,7 +66,7 @@ export const bookings = [
     cabin: {
       id: 2,
     },
-    guests: {
+    guest: {
       id: 5,
       fullName: "Jane Smith",
     },
@@ -80,7 +80,7 @@ export const bookings = [
     cabin: {
       id: 2,
     },
-    guests: {
+    guest: {
       id: 6,
       fullName: "Alice Johnson",
     },
@@ -95,7 +95,7 @@ export const bookings = [
     cabin: {
       id: 3,
     },
-    guests: {
+    guest: {
       id: 7,
       fullName: "Bob Brown",
     },
@@ -109,7 +109,7 @@ export const bookings = [
     cabin: {
       id: 3,
     },
-    guests: {
+    guest: {
       id: 8,
       fullName: "Charlie Green",
     },
@@ -123,7 +123,7 @@ export const bookings = [
     cabin: {
       id: 3,
     },
-    guests: {
+    guest: {
       id: 9,
       fullName: "Diana Blue",
     },
@@ -137,7 +137,7 @@ export const bookings = [
     cabin: {
       id: 3,
     },
-    guests: {
+    guest: {
       id: 10,
       fullName: "Eve Black",
     },
@@ -152,7 +152,7 @@ export const bookings = [
     cabin: {
       id: 4,
     },
-    guests: {
+    guest: {
       id: 11,
       fullName: "Frank White",
     },
@@ -166,7 +166,7 @@ export const bookings = [
     cabin: {
       id: 4,
     },
-    guests: {
+    guest: {
       id: 12,
       fullName: "Grace Pink",
     },
@@ -180,7 +180,7 @@ export const bookings = [
     cabin: {
       id: 4,
     },
-    guests: {
+    guest: {
       id: 13,
       fullName: "Hank Red",
     },
@@ -195,7 +195,7 @@ export const bookings = [
     cabin: {
       id: 5,
     },
-    guests: {
+    guest: {
       id: 14,
       fullName: "Ivy Grey",
     },
@@ -209,7 +209,7 @@ export const bookings = [
     cabin: {
       id: 5,
     },
-    guests: {
+    guest: {
       id: 15,
       fullName: "Jack Yellow",
     },
@@ -223,7 +223,7 @@ export const bookings = [
     cabin: {
       id: 5,
     },
-    guests: {
+    guest: {
       id: 16,
       fullName: "Kate Purple",
     },
@@ -238,7 +238,7 @@ export const bookings = [
     cabin: {
       id: 6,
     },
-    guests: {
+    guest: {
       id: 17,
       fullName: "Leo Orange",
     },
@@ -248,11 +248,11 @@ export const bookings = [
     startDate: "2024-06-03T10:00:00+00:00",
     endDate: "2024-06-09T10:00:00+00:00",
     numGuests: 2,
-    status: "checkedOut",
+    status: "checkedIn",
     cabin: {
       id: 6,
     },
-    guests: {
+    guest: {
       id: 18,
       fullName: "Mia Brown",
     },
@@ -266,7 +266,7 @@ export const bookings = [
     cabin: {
       id: 6,
     },
-    guests: {
+    guest: {
       id: 19,
       fullName: "Noah Blue",
     },
@@ -280,7 +280,7 @@ export const bookings = [
     cabin: {
       id: 6,
     },
-    guests: {
+    guest: {
       id: 20,
       fullName: "Olivia Green",
     },
@@ -295,7 +295,7 @@ export const bookings = [
     cabin: {
       id: 1,
     },
-    guests: {
+    guest: {
       id: 21,
       fullName: "Paul Grey",
     },
@@ -309,7 +309,7 @@ export const bookings = [
     cabin: {
       id: 2,
     },
-    guests: {
+    guest: {
       id: 22,
       fullName: "Quincy Black",
     },
@@ -323,7 +323,7 @@ export const bookings = [
     cabin: {
       id: 3,
     },
-    guests: {
+    guest: {
       id: 23,
       fullName: "Rachel White",
     },
@@ -337,7 +337,7 @@ export const bookings = [
     cabin: {
       id: 4,
     },
-    guests: {
+    guest: {
       id: 24,
       fullName: "Steve Brown",
     },
@@ -351,7 +351,7 @@ export const bookings = [
     cabin: {
       id: 5,
     },
-    guests: {
+    guest: {
       id: 25,
       fullName: "Tina Blue",
     },
@@ -365,7 +365,7 @@ export const bookings = [
     cabin: {
       id: 6,
     },
-    guests: {
+    guest: {
       id: 26,
       fullName: "Uma Green",
     },
@@ -380,7 +380,7 @@ export const bookings = [
     cabin: {
       id: 1,
     },
-    guests: {
+    guest: {
       id: 27,
       fullName: "Victor Blue",
     },
@@ -394,7 +394,7 @@ export const bookings = [
     cabin: {
       id: 2,
     },
-    guests: {
+    guest: {
       id: 28,
       fullName: "Wendy Grey",
     },
@@ -408,7 +408,7 @@ export const bookings = [
     cabin: {
       id: 3,
     },
-    guests: {
+    guest: {
       id: 29,
       fullName: "Xander Black",
     },
@@ -422,7 +422,7 @@ export const bookings = [
     cabin: {
       id: 4,
     },
-    guests: {
+    guest: {
       id: 30,
       fullName: "Yara White",
     },

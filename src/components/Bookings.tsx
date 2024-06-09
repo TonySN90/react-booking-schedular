@@ -10,13 +10,20 @@ function Bookings() {
   const [currentId, setCurrentId] = useState(0);
   const BookingElement = useRef<HTMLDivElement>(null);
 
-  const { schedularData, tooltips } = useContext(SchedularContext);
+  const {
+    schedularData,
+    tooltips,
+    bookings,
+    fnCheckIn,
+    fnCheckOut,
+    fnShowInfo,
+    fnUpdateBooking,
+  } = useContext(SchedularContext);
   if (!schedularData) throw new Error("SchedularContext not found");
 
   const {
     isLoadingCabins,
     isLoadingBookings,
-    bookings,
     today,
     calcBookingPositionX,
     calcBookingPositionY,
@@ -63,7 +70,7 @@ function Bookings() {
                       tooltips.find((t) => t.id === "bookings-menu-details-btn")
                         ?.id
                     }
-                    onClick={() => console.log("Booking-information")}
+                    onClick={() => fnShowInfo()}
                     className="group flex items-center justify-center w-7 h-7 bg-color_status_4 rounded-full cursor-pointer"
                   >
                     <PiInfoBold className="group-hover:scale-125 transition-all" />
@@ -80,7 +87,7 @@ function Bookings() {
                             (t) => t.id === "bookings-menu-checkin-btn"
                           )?.id
                         }
-                        onClick={() => console.log("CheckIn")}
+                        onClick={() => fnCheckIn()}
                         className="group flex items-center justify-center w-7 h-7 bg-color_status_1 rounded-full cursor-pointer"
                       >
                         <TbDoorEnter className="group-hover:scale-125 transition-all" />
@@ -96,13 +103,14 @@ function Bookings() {
                           (t) => t.id === "bookings-menu-checkout-btn"
                         )?.id
                       }
-                      onClick={() => console.log("CheckOut")}
+                      onClick={() => fnCheckOut()}
                       className="group flex items-center justify-center w-7 h-7 bg-color_status_3 rounded-full cursor-pointer"
                     >
                       <TbDoorExit className="group-hover:scale-125 transition-all" />
                     </div>
                   )}
 
+                  {/* Edit-Btn */}
                   {(booking.status === BookingStatusTypes.CHECKEDIN ||
                     booking.status === BookingStatusTypes.UNCONFIRMED) && (
                     <div
@@ -110,7 +118,7 @@ function Bookings() {
                         tooltips.find((t) => t.id === "bookings-menu-edit-btn")
                           ?.id
                       }
-                      onClick={() => console.log("update booking")}
+                      onClick={() => fnUpdateBooking()}
                       className="group flex items-center justify-center w-7 h-7 bg-color_status_2 rounded-full cursor-pointer"
                     >
                       <MdModeEdit className="group-hover:scale-125 transition-all" />
@@ -121,7 +129,7 @@ function Bookings() {
 
               <div className="relative flex items-center text-xs px-3 font-semibold h-full w-full cursor-pointer">
                 <div className="truncate">
-                  <span>{`${booking.guests.fullName} | ${booking.numGuests} P`}</span>
+                  <span>{`${booking.guest.fullName} | ${booking.numGuests} P`}</span>
                 </div>
               </div>
             </div>
