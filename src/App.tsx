@@ -8,6 +8,7 @@ export default function App() {
         id="yourWrapper"
         className="flex justify-center items-center h-screen w-[90%] m-auto"
       >
+        {/* <h1>React Booking Schedular</h1> */}
         <ReactBookingSchedular />
       </div>
     </BrowserRouter>

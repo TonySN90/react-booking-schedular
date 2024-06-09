@@ -206,7 +206,6 @@ function useSchedular(): ISchedularTypes {
   }
 
   function calcBookingPositionY(cabinId: number) {
-    console.log(cabinId);
     const labelPosition = cabins.findIndex((cabin) => cabin.id === cabinId) + 1;
     return booking_offset_top + rowHeight * labelPosition;
   }

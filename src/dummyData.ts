@@ -16,10 +16,10 @@ export const bookings = [
   },
   {
     id: 2,
-    startDate: "2024-06-05T10:00:00+00:00",
+    startDate: "2024-06-04T10:00:00+00:00",
     endDate: "2024-06-12T10:00:00+00:00",
     numGuests: 2,
-    status: "unconfirmed",
+    status: "checkedIn",
     cabin: {
       id: 1,
     },
@@ -102,7 +102,7 @@ export const bookings = [
   },
   {
     id: 8,
-    startDate: "2024-06-03T10:00:00+00:00",
+    startDate: "2024-06-02T10:00:00+00:00",
     endDate: "2024-06-07T10:00:00+00:00",
     numGuests: 2,
     status: "checkedOut",
@@ -130,8 +130,8 @@ export const bookings = [
   },
   {
     id: 10,
-    startDate: "2024-06-15T10:00:00+00:00",
-    endDate: "2024-06-29T10:00:00+00:00",
+    startDate: "2024-06-14T10:00:00+00:00",
+    endDate: "2024-06-22T10:00:00+00:00",
     numGuests: 3,
     status: "unconfirmed",
     cabin: {
@@ -145,7 +145,7 @@ export const bookings = [
   // Cabin 4
   {
     id: 11,
-    startDate: "2024-06-01T10:00:00+00:00",
+    startDate: "2024-05-22T10:00:00+00:00",
     endDate: "2024-06-05T10:00:00+00:00",
     numGuests: 2,
     status: "checkedOut",
@@ -260,9 +260,9 @@ export const bookings = [
   {
     id: 19,
     startDate: "2024-06-09T10:00:00+00:00",
-    endDate: "2024-06-16T10:00:00+00:00",
+    endDate: "2024-06-17T10:00:00+00:00",
     numGuests: 3,
-    status: "checkedIn",
+    status: "unconfirmed",
     cabin: {
       id: 6,
     },
@@ -401,7 +401,7 @@ export const bookings = [
   },
   {
     id: 29,
-    startDate: "2024-06-16T10:00:00+00:00",
+    startDate: "2024-06-22T10:00:00+00:00",
     endDate: "2024-06-25T10:00:00+00:00",
     numGuests: 3,
     status: "unconfirmed",
